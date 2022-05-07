@@ -325,9 +325,6 @@ PRODUCT_PACKAGES += \
     system_dlkm_modprobe.sh \
     vendor_modprobe.sh
 
-$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-tapas)
-$(call soong_config_set,qtipower,tap_to_wake_node,/proc/tp_gesture)
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
 
