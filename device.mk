@@ -448,8 +448,11 @@ TARGET_KERNEL_VERSION := 5.15
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    android.hardware.power@1.2.vendor
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -518,6 +521,10 @@ PRODUCT_SHIPPING_API_LEVEL := $(SHIPPING_API_LEVEL)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client \
     hardware/xiaomi
 
 # Soong configs
