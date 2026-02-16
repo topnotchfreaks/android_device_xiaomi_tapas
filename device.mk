@@ -321,7 +321,6 @@ PRODUCT_PACKAGES += \
     system_dlkm_modprobe.sh \
     vendor_modprobe.sh
 
-$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-tapas)
 $(call soong_config_set,qtipower,tap_to_wake_node,/proc/tp_gesture)
 
 PRODUCT_COPY_FILES += \
@@ -448,6 +447,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//$(LOCAL_PATH):libperfmgr-ext-xiaomi)
 
 # Protobuf
 PRODUCT_PACKAGES += \
