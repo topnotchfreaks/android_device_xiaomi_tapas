@@ -279,6 +279,3 @@ case "$console_config" in
 		echo "Enable console config to $console_config"
 	;;
 esac
-
-# Post-setup services
-setprop vendor.post_boot.parsed 1
