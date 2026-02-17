@@ -158,7 +158,8 @@ echo $sched_rt_period_us > /proc/sys/kernel/sched_rt_period_us
 echo $sched_rt_runtime_us > /proc/sys/kernel/sched_rt_runtime_us
 
 # Disable Core control on silver
-echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/enable
+
 # Core control parameters for gold
 echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
@@ -166,29 +167,15 @@ echo 40 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
 echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 
-# Controls how many more tasks should be eligible to run on gold CPUs
-# w.r.t number of gold CPUs available to trigger assist (max number of
-# tasks eligible to run on previous cluster minus number of CPUs in
-# the previous cluster).
-#
-# Setting to 1 by default which means there should be at least
-# 5 tasks eligible to run on gold cluster (tasks running on gold cores
-# plus misfit tasks on silver cores) to trigger assitance from gold+.
-#echo 1 > /sys/devices/system/cpu/cpu7/core_ctl/nr_prev_assist_thresh
-
-# Setting b.L scheduler parameters
-echo 65 > /proc/sys/walt/sched_downmigrate
-echo 71 > /proc/sys/walt/sched_upmigrate
-echo 100 > /proc/sys/walt/sched_group_upmigrate
-echo 85 > /proc/sys/walt/sched_group_downmigrate
+# Setting b.L scheduler parameters  
+echo 60 > /proc/sys/walt/sched_downmigrate
+echo 85 > /proc/sys/walt/sched_upmigrate
+echo 85 > /proc/sys/walt/sched_group_upmigrate
+echo 70 > /proc/sys/walt/sched_group_downmigrate
 echo 1 > /proc/sys/walt/sched_walt_rotate_big_tasks
 echo 400000000 > /proc/sys/walt/sched_coloc_downmigrate_ns
-echo 39000000 39000000 39000000 39000000 39000000 39000000 39000000 39000000 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_ns
 echo 248 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
-echo 10 10 10 10 10 10 10 10 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_busy_pct
-echo 8500000 8500000 8500000 8500000 8500000 8500000 8500000 8500000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
 echo 255 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
-echo 1 1 1 1 1 1 1 1 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
 echo 40 > /proc/sys/walt/sched_cluster_util_thres_pct
 echo 0 > /proc/sys/walt/sched_idle_enough
 
@@ -222,23 +209,19 @@ echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
 # configure governor settings for silver cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
-echo 1516800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
+echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
+echo 2000 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
+echo 1190400 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
 echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
 
-# configure input boost settings
-echo 1190000 0 0 0 0 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
-echo 80 > /proc/sys/walt/input_boost/input_boost_ms
-
 # configure governor settings for gold cluster
 echo "walt" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
-echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
+echo 20000 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
+echo 2000 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
 echo 1344000 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
-echo 1056000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+echo 806400 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
 
