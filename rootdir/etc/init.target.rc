@@ -156,6 +156,42 @@ on early-boot
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
+    
+    # Memory Bus Monitor Permissions
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/hist_memory
+    chmod 0664 /sys/devices/system/cpu/bus_dcvs/DDR/1b8e300.qcom,bwmon-ddr/hyst_length
+
+    # Uclamp (Critical for prioritizing Top-App tasks)
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.min
+    chown system system /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
+    chown system system /dev/cpuctl/foreground/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.min
+    chmod 0664 /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
+    chmod 0664 /dev/cpuctl/foreground/cpu.uclamp.min
+
+    # WALT Task Thresholds
+    chown system system /proc/sys/walt/sched_busy_hysteresis_enable_cpus
+    chown system system /proc/sys/walt/sched_min_task_util_for_boost
+    chown system system /proc/sys/walt/sched_min_task_util_for_colocation
+    chown system system /proc/sys/walt/sched_min_task_util_for_uclamp
+    chmod 0664 /proc/sys/walt/sched_busy_hysteresis_enable_cpus
+    chmod 0664 /proc/sys/walt/sched_min_task_util_for_boost
+    chmod 0664 /proc/sys/walt/sched_min_task_util_for_colocation
+    chmod 0664 /proc/sys/walt/sched_min_task_util_for_uclamp
+
+    # CPU Down Rate Limits
+    chown system system /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
+    chown system system /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
+    chmod 0664 /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
+
+    # GPU Advanced Tuning
+    chown system system /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chown system system /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chown system system /sys/class/kgsl/kgsl-3d0/idle_timer
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/idle_timer
 
 #Display
     chown system system /sys/class/mi_display/disp-DSI-0/disp_param
