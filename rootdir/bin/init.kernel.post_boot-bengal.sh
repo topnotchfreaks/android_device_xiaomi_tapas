@@ -227,7 +227,7 @@ echo 0-3 > /dev/cpuset/system-background/cpus
 echo 0-7 > /dev/cpuset/foreground/boost/cpus
 echo 0-7 > /dev/cpuset/foreground/cpus
 echo 0-7 > /dev/cpuset/top-app/cpus
-echo 60 > /dev/cpuset/foreground/cpu.uclamp_min
+echo 20 > /dev/cpuset/foreground/cpu.uclamp_min
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
