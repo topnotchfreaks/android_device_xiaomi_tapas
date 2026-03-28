@@ -94,7 +94,8 @@
       "Path": "/sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us",
       "Values": [
         "10000",
-        "2000"
+        "2000",
+        "5000"
       ],
       "ResetOnInit": true
     },
@@ -126,7 +127,9 @@
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
         "0",
-        "20"
+        "20",
+        "30",
+        "40"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -317,7 +320,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
-      "Value": "2208000"
+      "Value": "2592000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -359,13 +362,31 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "SchedBusyHystNs",
       "Duration": 0,
-      "Value": "33000000"
+      "Value": "8000000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "SchedBusyHystEnableCPUs",
       "Duration": 0,
       "Value": "255"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "UclampFGMin",
+      "Duration": 0,
+      "Value": "40"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBigClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "5000"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "PowerHALAudioState",
+      "Duration": 0,
+      "Value": "AUDIO_STREAMING_LOW_LATENCY"
     },
     {
       "PowerHint": "INTERACTION",
@@ -479,13 +500,13 @@
       "PowerHint": "AUDIO_STREAMING",
       "Node": "UclampFGMin",
       "Duration": 0,
-      "Value": "20"
+      "Value": "30"
     },
     {
       "PowerHint": "AUDIO_STREAMING",
       "Node": "CPUBigClusterDownRateLimit",
       "Duration": 0,
-      "Value": "2000"
+      "Value": "5000"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
@@ -497,13 +518,13 @@
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
       "Node": "UclampFGMin",
       "Duration": 0,
-      "Value": "20"
+      "Value": "30"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
       "Node": "CPUBigClusterDownRateLimit",
       "Duration": 0,
-      "Value": "2000"
+      "Value": "5000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
