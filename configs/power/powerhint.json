@@ -455,6 +455,18 @@
       "Value": "1804000"
     },
     {
+    "PowerHint": "INTERACTION",
+    "Node": "GPUForceRailOn",
+    "Duration": 0,
+    "Value": "1"
+    },
+    {
+    "PowerHint": "INTERACTION",
+    "Node": "GPUForceClkOn",
+    "Duration": 0,
+    "Value": "1"
+    },
+    {
       "PowerHint": "INTERACTIVE",
       "Node": "SchedBusyHystNs",
       "Duration": 0,
