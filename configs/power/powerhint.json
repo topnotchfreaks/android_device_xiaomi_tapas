@@ -344,7 +344,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "1114800000"
+      "Value": "1260000000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -357,6 +357,42 @@
       "Node": "PowerHALAudioState",
       "Duration": 0,
       "Value": "AUDIO_STREAMING_LOW_LATENCY"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "GPUForceRailOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "GPUForceClkOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "40"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "1555000"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "SchedBusyHystNs",
+      "Duration": 0,
+      "Value": "33000000"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "SchedBusyHystEnableCPUs",
+      "Duration": 0,
+      "Value": "255"
     },
     {
       "PowerHint": "INTERACTION",
@@ -379,7 +415,7 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
-      "Duration": 0,
+      "Duration": 2000,
       "Value": "40"
     },
     {
@@ -397,7 +433,7 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTALatency",
-      "Duration": 0,
+      "Duration": 3000,
       "Value": "1"
     },
     {
@@ -455,22 +491,82 @@
       "Value": "1804000"
     },
     {
-    "PowerHint": "INTERACTION",
-    "Node": "GPUForceRailOn",
-    "Duration": 0,
-    "Value": "1"
+      "PowerHint": "INTERACTION",
+      "Node": "GPUForceRailOn",
+      "Duration": 0,
+      "Value": "1"
     },
     {
-    "PowerHint": "INTERACTION",
-    "Node": "GPUForceClkOn",
-    "Duration": 0,
-    "Value": "1"
+      "PowerHint": "INTERACTION",
+      "Node": "GPUForceClkOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPULittleClusterUpRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPULittleClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "20000"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPUBigClusterUpRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "CPUBigClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "10000"
     },
     {
       "PowerHint": "INTERACTIVE",
       "Node": "SchedBusyHystNs",
       "Duration": 0,
-      "Value": "3000000"
+      "Value": "33000000"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "SchedBusyHystEnableCPUs",
+      "Duration": 0,
+      "Value": "255"
+    },
+    {
+      "PowerHint": "TOUCH_DOWN",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 100,
+      "Value": "1516800"
+    },
+    {
+      "PowerHint": "TOUCH_DOWN",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 100,
+      "Value": "2208000"
+    },
+    {
+      "PowerHint": "TOUCH_DOWN",
+      "Node": "CPUBWMinFreq",
+      "Duration": 100,
+      "Value": "1804000"
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPUBWMinFreq",
+      "Duration": 80,
+      "Value": "1804000"
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 80,
+      "Value": "940800"
     },
     {
       "PowerHint": "LAUNCH",
@@ -487,13 +583,13 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
-      "Duration": 2000,
+      "Duration": 1200,
       "Value": "40"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampFGMin",
-      "Duration": 3000,
+      "Duration": 1200,
       "Value": "40"
     },
     {
@@ -505,7 +601,7 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUIdleTimer",
-      "Duration": 3000,
+      "Duration": 2000,
       "Value": "500"
     },
     {
@@ -550,7 +646,6 @@
       "Duration": 0,
       "Value": "2092000"
     },
-
     {
       "PowerHint": "AUDIO_STREAMING",
       "Node": "UclampFGMin",
@@ -562,6 +657,30 @@
       "Node": "CPUBigClusterDownRateLimit",
       "Duration": 0,
       "Value": "5000"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "940800"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1056000"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING",
+      "Node": "CPULittleClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "20000"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING",
+      "Node": "UclampTALatency",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
@@ -580,6 +699,30 @@
       "Node": "CPUBigClusterDownRateLimit",
       "Duration": 0,
       "Value": "5000"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1190400"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1344000"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "CPULittleClusterDownRateLimit",
+      "Duration": 0,
+      "Value": "20000"
+    },
+    {
+      "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
+      "Node": "UclampTALatency",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
