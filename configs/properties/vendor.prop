@@ -221,6 +221,8 @@ graphics.gpu.profiler.support=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
+debug.graphics.game_default_frame_rate.disabled=true
+debug.sf.disable_client_composition_cache=1
 
 # HWUI ADPF
 debug.sf.enable_adpf_cpu_hint=true
