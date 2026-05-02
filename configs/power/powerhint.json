@@ -350,13 +350,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "1025000000"
-    },
-    {
-      "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "PowerHALAudioState",
-      "Duration": 0,
-      "Value": "AUDIO_STREAMING_LOW_LATENCY"
+      "Value": "1114800000"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -372,15 +366,33 @@
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "GPUIdleTimer",
+      "Duration": 0,
+      "Value": "2000"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "PowerHALAudioState",
+      "Duration": 0,
+      "Value": "AUDIO_STREAMING_LOW_LATENCY"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "UclampTAMin",
       "Duration": 0,
       "Value": "40"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
-      "Node": "CPUBWMinFreq",
+      "Node": "UclampTALatency",
       "Duration": 0,
-      "Value": "1555000"
+      "Value": "1"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "UclampFGMin",
+      "Duration": 0,
+      "Value": "30"
     },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -393,6 +405,48 @@
       "Node": "SchedBusyHystEnableCPUs",
       "Duration": 0,
       "Value": "255"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "SchedMinTaskUtilForBoost",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "SchedMinTaskUtilForColoc",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "SchedMinTaskUtilForUclamp",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBWHystTriggerCount",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBWHystLength",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBWHistMemory",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "SUSTAINED_PERFORMANCE",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "1804000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -410,7 +464,7 @@
       "PowerHint": "INTERACTION",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "1025000000"
+      "Value": "1114800000"
     },
     {
       "PowerHint": "INTERACTION",
@@ -530,13 +584,13 @@
       "PowerHint": "INTERACTIVE",
       "Node": "SchedBusyHystNs",
       "Duration": 0,
-      "Value": "33000000"
+      "Value": "3000000"
     },
     {
       "PowerHint": "INTERACTIVE",
       "Node": "SchedBusyHystEnableCPUs",
       "Duration": 0,
-      "Value": "255"
+      "Value": "15"
     },
     {
       "PowerHint": "TOUCH_DOWN",
