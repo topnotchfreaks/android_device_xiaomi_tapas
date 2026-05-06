@@ -451,49 +451,49 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "1516800"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "2208000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "GPUMinFreq",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "1114800000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
-      "Duration": 2000,
+      "Duration": 1000,
       "Value": "40"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampFGMin",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "30"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "GPUIdleTimer",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "2000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTALatency",
-      "Duration": 3000,
+      "Duration": 1000,
       "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedBusyHystNs",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "33000000"
     },
     {
@@ -541,19 +541,19 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "1804000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "GPUForceRailOn",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "GPUForceClkOn",
-      "Duration": 0,
+      "Duration": 1000,
       "Value": "1"
     },
     {
