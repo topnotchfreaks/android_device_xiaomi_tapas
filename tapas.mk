@@ -1,20 +1,21 @@
 #
-# Copyright (C) 2023 The LineageOS Project
-#
+# SPDX-FileCopyrightText: LumineDroid
 # SPDX-License-Identifier: Apache-2.0
 #
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+TARGET_SUPPORTS_OMX_SERVICE := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from tapas device
 $(call inherit-product, device/xiaomi/tapas/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common LumineDrois stuff.
+$(call inherit-product, vendor/lumine/config/common_full_phone.mk)
+LUMINE_MAINTAINER := TopNotchFreaks
 
-
-PRODUCT_NAME := lineage_tapas
+PRODUCT_NAME := tapas
 PRODUCT_DEVICE := tapas
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
