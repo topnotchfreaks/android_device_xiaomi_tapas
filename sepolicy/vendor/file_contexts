@@ -14,6 +14,7 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay-service\.sdm u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /dev/mi_display/disp_feature u:object_r:vendor_displayfeature_device:s0
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-+[0-1](/.*)? u:object_r:vendor_sysfs_displayfeature:s0
+/data/vendor/display(/.*)?                               u:object_r:display_vendor_data_file:s0
 
 # Fingerprint data
 /data/gf_data(/.*)?                                                     u:object_r:goodix_fingerprint_data_file:s0
