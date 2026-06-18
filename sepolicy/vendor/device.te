@@ -1,2 +1,3 @@
-# Fingerprint
+type vendor_displayfeature_device, dev_type;
+type sound_device, dev_type, mlstrustedobject;
 type fingerprint_device, dev_type;
