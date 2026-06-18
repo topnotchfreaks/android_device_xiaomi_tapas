@@ -34,6 +34,7 @@ ro.vendor.smart_dfps.enable              u:object_r:vendor_displayfeature_prop:s
 ro.vendor.display.default_fps            u:object_r:vendor_displayfeature_prop:s0
 vendor.hbm.enable                        u:object_r:vendor_displayfeature_prop:s0
 persist.vendor.max.brightness            u:object_r:vendor_displayfeature_prop:s0
+vendor.panel.                            u:object_r:vendor_panel_info_prop:s0
 
 # Fingerprint
 persist.vendor.fpc.                      u:object_r:vendor_fp_prop:s0
