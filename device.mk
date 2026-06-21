@@ -369,10 +369,6 @@ $(call soong_config_set,lineage_health,charging_control_charging_enabled,0)
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/qcom-battery/input_suspend)
 $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.sdm
-
 # Media
 PRODUCT_PACKAGES += \
     libavservices_minijail:64 \
