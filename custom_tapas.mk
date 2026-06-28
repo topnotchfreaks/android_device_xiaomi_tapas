@@ -10,11 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from tapas device
 $(call inherit-product, device/xiaomi/tapas/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelOS stuff.
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
-
-PRODUCT_NAME := lineage_tapas
+PRODUCT_NAME := custom_tapas
 PRODUCT_DEVICE := tapas
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
