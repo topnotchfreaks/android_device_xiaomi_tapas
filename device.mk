@@ -622,8 +622,5 @@ PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
-# Vendor MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/tapas-miuicamera/device.mk)
-
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/xiaomi/tapas/tapas-vendor.mk)
