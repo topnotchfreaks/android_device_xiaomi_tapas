@@ -1595,4 +1595,3 @@ vendor/lib64/hw/vulkan.adreno.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
-vendor/bin/hw/android.hardware.wifi@1.0-service
