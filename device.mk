@@ -566,6 +566,9 @@ PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor \
     vendor.qti.hardware.systemhelper@1.0.vendor
 
+# Dexpreopt
+PRODUCT_DEX_PREOPT_MODULE_CONFIGS += qti-telephony-common=disable
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
