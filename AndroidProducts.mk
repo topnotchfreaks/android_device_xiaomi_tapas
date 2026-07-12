@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_tapas.mk
+    $(LOCAL_DIR)/genesis_tapas.mk
