@@ -77,3 +77,7 @@ persist.log.tag.minksocket=S
 
 # Bluetooth
 persist.vendor.bt.a2dp.aac_whitelist=false
+
+# Blur
+ro.custom.blur.enable=false
+ro.surface_flinger.supports_background_blur=0

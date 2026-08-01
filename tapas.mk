@@ -17,7 +17,7 @@ $(call inherit-product, vendor/custom/config/common_full_phone.mk)
 WITH_GMS := true
 ASCP_MAINTAINER := TopNotchFreaks
 WITH_BCR := true
-WITH_REVANCED := true
+TARGET_ENABLE_BLUR := false
 
 PRODUCT_NAME := tapas
 PRODUCT_DEVICE := tapas
