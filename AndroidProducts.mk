@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/clover_topaz.mk
+    $(LOCAL_DIR)/lineage_tapas.mk

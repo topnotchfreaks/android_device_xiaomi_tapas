@@ -11,13 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/tapas/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/clover/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-CLOVER_MAINTAINER := TopNotchFreaks
-TARGET_ENABLE_BLUR := false
-WITH_GMS := true
 
-PRODUCT_NAME := clover_tapas
+PRODUCT_NAME := lineage_tapas
 PRODUCT_DEVICE := tapas
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
