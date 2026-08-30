@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+     <!-- Maintainer strings -->
+     <string name="maintainer_name" translatable="false">TopNotchFreaks</string>
+     <string name="maintainer_telegram" translatable="false">https://t.me/topnotchfreaks</string>
+</resources>

@@ -11,10 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/tapas/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
+TARGET_BUILD_GAPPS := true
 
-PRODUCT_NAME := lineage_tapas
+PRODUCT_NAME := yaap_tapas
 PRODUCT_DEVICE := tapas
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
