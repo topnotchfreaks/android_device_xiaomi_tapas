@@ -68,3 +68,7 @@ genfscon sysfs /devices/platform/soc/4ac0000.qcom,qupv3_0_geni_se/4a84000.i2c/i2
 # Misc
 genfscon sysfs /power/mem_sleep u:object_r:sysfs_mem_sleep:s0
 
+# KProfiles
+genfscon sysfs /module/kprofiles/parameters/auto_kp u:object_r:sysfs_kprofiles:s0
+genfscon sysfs /kernel/kprofiles/kp_mode u:object_r:sysfs_kprofiles:s0
+
