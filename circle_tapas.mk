@@ -11,10 +11,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/tapas/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/circle/config/common_full_phone.mk)
 
+# Signed-keys
+-include vendor/lineage-priv/keys/keys.mk
 
-PRODUCT_NAME := lineage_tapas
+# Device configs
+TARGET_BOOT_ANIMATION_RES = 1080
+WITH_GMS := true
+CIRCLE_MAINTAINER := TopNotchFreaks
+
+PRODUCT_NAME := circle_tapas
 PRODUCT_DEVICE := tapas
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
