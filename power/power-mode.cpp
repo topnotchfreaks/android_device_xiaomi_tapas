@@ -17,6 +17,7 @@
 #include <aidl/android/hardware/power/BnPower.h>
 #include <android-base/file.h>
 #include <android-base/logging.h>
+#include <cstring>
 #include <linux/input.h>
 
 namespace {
@@ -37,7 +38,8 @@ int open_ts_input() {
 
                 fd = open(absolute_path, O_RDWR);
                 if (ioctl(fd, EVIOCGNAME(sizeof(name) - 1), &name) > 0) {
-                    if (strcmp(name, "fts") == 0 || strcmp(name, "goodix_ts") == 0 ||
+                    if (strncmp(name, "fts", 3) == 0 || strncmp(name, "goodix", 6) == 0 ||
+                            strncmp(name, "nvt", 3) == 0 ||
                             strcmp(name, "NVTCapacitiveTouchScreen") == 0)
                         break;
                 }
