@@ -13,6 +13,19 @@ $(call inherit-product, device/xiaomi/tapas/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+WITH_GMS := true
+WITH_GMS_COMMS_SUITE := true
+WITH_PIXEL_LAUNCHER := true
+TARGET_USE_MAPS := true
+TARGET_USE_FILES := true
+TARGET_USE_GPHOTOS := true
+TARGET_USE_WALLPAPERS := true
+USE_REALITY_ENGINE := true
+SURFACE_FLINGER_BOOST := true
+TARGET_DISABLE_MATLOG := true
+
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
 
 PRODUCT_NAME := lineage_tapas
 PRODUCT_DEVICE := tapas
