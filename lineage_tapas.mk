@@ -23,7 +23,7 @@ PRODUCT_MODEL := Redmi Note 12 4G
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="tapas_global-user 15 AQ3A.240829.003 OS2.0.205.0.VMTMIXM release-keys" \
-    BuildFingerprint=Redmi/tapas_global/tapas:15/AQ3A.240829.003/OS2.0.205.0.VMTMIXM:user/release-keys \
+    BuildDesc="tapas_global-user 15 AQ3A.240829.003 OS2.0.207.0.VMTMIXM release-keys" \
+    BuildFingerprint=Redmi/tapas_global/tapas:15/AQ3A.240829.003/OS2.0.207.0.VMTMIXM:user/release-keys \
     DeviceProduct=tapas
-
+    
