@@ -1,5 +1,7 @@
 # All unpinned and pinned blobs are extracted from
 # Redmi/tapas_global/tapas:15/AQ3A.240829.003/OS2.0.205.0.VMTMIXM:user/release-keys unless source is specified
+# Vendor and ODM partition blobs are refreshed from
+# Redmi/tapas_global/tapas:15/AQ3A.240829.003/OS2.0.207.0.VMTMIXM:user/release-keys
 
 # ACDB
 vendor/etc/acdbdata/bengal_idp/IDP_acdb_cal.acdb
@@ -694,14 +696,14 @@ vendor/lib64/libqfp-service.so
 vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
-# Firmware touch
+# Firmware touch (source: OS2.0.207.0.VMTMIXM)
 odm/firmware/Conf_MultipleTest_ft3519t.ini:vendor/firmware/Conf_MultipleTest_ft3519t.ini
 odm/firmware/focaltech_ts_fw_samsung_ft3519t.bin:vendor/firmware/focaltech_ts_fw_samsung_ft3519t.bin
 odm/firmware/goodix_cfg_group.bin:vendor/firmware/goodix_cfg_group.bin
 odm/firmware/goodix_firmware.bin:vendor/firmware/goodix_firmware.bin
 odm/firmware/gtx8_limits_M395.csv:vendor/firmware/gtx8_limits_M395.csv
 
-# Firmware Vendor
+# Firmware Vendor (source: OS2.0.207.0.VMTMIXM)
 vendor/firmware/a610_zap.b00
 vendor/firmware/a610_zap.b01
 vendor/firmware/a610_zap.b02
@@ -744,6 +746,10 @@ vendor/firmware/sipa.bin
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
 vendor/firmware/venus.mbn
+vendor/firmware/venus_4mb.mbn
+vendor/firmware/venus_4mb_unsigned.mbn
+vendor/firmware/venus_4mb_v6.mbn
+vendor/firmware/venus_4mb_v7.mbn
 vendor/firmware/venus_unsigned.mbn
 vendor/firmware/venus_v6.mbn
 vendor/firmware/venus_v7.mbn
