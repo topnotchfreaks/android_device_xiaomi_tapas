@@ -150,10 +150,6 @@ PRODUCT_PACKAGES += \
 # Characteristics
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# Device-specific settings
-PRODUCT_PACKAGES += \
-    DeviceSettings
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4.vendor \
@@ -426,8 +422,7 @@ PRODUCT_PACKAGES += \
     WifiResTapas
 
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -452,7 +447,7 @@ TARGET_KERNEL_VERSION := 5.15
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr \
+    android.hardware.power-service.pixel-libperfmgr \
     libqti-perfd-client
 
 # Protobuf
@@ -525,7 +520,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/google/pixel/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client \
     hardware/qcom-caf/bootctrl
 
