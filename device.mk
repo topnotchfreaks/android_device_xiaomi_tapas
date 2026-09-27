@@ -42,7 +42,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.1-impl:64 \
+    android.hardware.audio@7.0-impl:64 \
     android.hardware.audio.effect@7.0-impl:64 \
     android.hardware.soundtrigger@2.3-impl:64
 
@@ -97,7 +97,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor:64 \
     android.hardware.bluetooth.audio-V2-ndk.vendor:64 \
     audio.bluetooth.default:64 \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor:64 \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor:64 \
     vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor:64 \
     vendor.qti.hardware.btconfigstore@1.0.vendor:64 \
     vendor.qti.hardware.btconfigstore@2.0.vendor:64 \
