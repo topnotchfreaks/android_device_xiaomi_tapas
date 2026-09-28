@@ -1,2 +1,0 @@
-# ION
-allow hal_audio_default ion_device:chr_file { read open ioctl };
