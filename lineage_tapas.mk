@@ -10,9 +10,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from tapas device
 $(call inherit-product, device/xiaomi/tapas/device.mk)
 
+TARGET_DISABLE_EPPE := true
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Camera information (multiple sensors supported)
+AXION_CAMERA_REAR_INFO := 50,8,2
+AXION_CAMERA_FRONT_INFO := 13
+
+# Maintainer name (underscores become spaces in the UI)
+AXION_MAINTAINER := TopNotchFreaks
+
+# Processor name (underscores become spaces)
+AXION_PROCESSOR := Snapdragon_685
+
+# Graphics & Display
+TARGET_ENABLE_BLUR := true
+TARGET_SUPPORTED_REFRESH_RATES := 60,120
+
+# doze flags
+# doze gestures
+TARGET_DOZE_TAP_PULSE_SUPPORTED ?= true
+TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED ?= true
+TARGET_DOZE_PICKUP_PULSE_SUPPORTED ?= true
+TARGET_DOZE_SIDE_FPS_PULSE_SUPPORTED ?= true
+# Vulkan
+TARGET_NEEDS_VULKAN_MEDIA_FIX := true
 
 PRODUCT_NAME := lineage_tapas
 PRODUCT_DEVICE := tapas
