@@ -1,0 +1,77 @@
+#
+# Sapphire (SM6225) - MiuiCamera / MIUIGallery Android 17 SELinux fix
+#
+# Android 17 added the priv_app_36 / platform_app_36 sandbox domains for apps
+# whose targetSdkVersion is < 37. MiuiCamera (com.android.camera, targetSdk 34)
+# runs as priv_app_36; MIUIGallery (com.miui.gallery) as platform_app_36. The
+# Xiaomi vendor sepolicy only granted camera access to platform_app / priv_app,
+# so the MI camera algo libs fail to load -> SIGSEGV on launch. These rules
+# mirror the pre-A17 grants onto the _36 domains.
+
+# MiPostProc HAL: vendor.xiaomi.hardware.campostproc::IMiPostProcService
+allow priv_app_36 vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
+allow platform_app_36 vendor_hal_camerapostproc_xiaomi_hwservice:hwservice_manager find;
+allow priv_app_36 hal_camera_default:binder { call transfer };
+allow hal_camera_default priv_app_36:binder { call transfer };
+allow priv_app_36 hal_camera_default:fd use;
+allow hal_camera_default priv_app_36:fd use;
+allow platform_app_36 hal_camera_default:binder { call transfer };
+allow hal_camera_default platform_app_36:binder { call transfer };
+allow platform_app_36 hal_camera_default:fd use;
+allow hal_camera_default platform_app_36:fd use;
+
+# QSPM (perf) HAL touched by camera/gallery render threads
+allow priv_app_36 vendor_hal_qspmhal_default:binder { call transfer };
+allow vendor_hal_qspmhal_default priv_app_36:binder { call transfer };
+allow priv_app_36 vendor_hal_qspmhal_default:fd use;
+allow vendor_hal_qspmhal_default priv_app_36:fd use;
+allow platform_app_36 vendor_hal_qspmhal_default:binder { call transfer };
+allow vendor_hal_qspmhal_default platform_app_36:binder { call transfer };
+allow platform_app_36 vendor_hal_qspmhal_default:fd use;
+allow vendor_hal_qspmhal_default platform_app_36:fd use;
+
+# Xiaomi MI-algo native libs loaded from /vendor/lib64 (libmialgoengine.so ...)
+allow priv_app_36 vendor_file:dir { getattr search open read };
+allow priv_app_36 vendor_file:file { getattr open read map execute };
+allow platform_app_36 vendor_file:dir { getattr search open read };
+allow platform_app_36 vendor_file:file { getattr open read map execute };
+
+# CDSP / ADSP used by the MI algo engine
+allow priv_app_36 adsprpcd_file:dir { open read search getattr };
+allow priv_app_36 vendor_xdsp_device:chr_file { ioctl open read write getattr };
+allow priv_app_36 vendor_qdsp_device:chr_file { ioctl open read write getattr };
+allow platform_app_36 adsprpcd_file:dir { open read search getattr };
+allow platform_app_36 vendor_xdsp_device:chr_file { ioctl open read write getattr };
+allow platform_app_36 vendor_qdsp_device:chr_file { ioctl open read write getattr };
+
+# Camera data dir
+allow priv_app_36 vendor_camera_data_file:dir { search open read getattr write add_name remove_name };
+allow priv_app_36 vendor_camera_data_file:file { getattr open read write create unlink map };
+allow platform_app_36 vendor_camera_data_file:dir { search open read getattr write add_name remove_name };
+allow platform_app_36 vendor_camera_data_file:file { getattr open read write create unlink map };
+
+# Vendor properties read by MiuiCamera / MIUIGallery
+allow priv_app_36 vendor_camera_sensor_prop:file { getattr open read map };
+allow priv_app_36 vendor_camera_prop:file { getattr open read map };
+allow priv_app_36 vendor_camera_p3enable_prop:file { getattr open read map };
+allow priv_app_36 vendor_display_prop:file { getattr open read map };
+allow priv_app_36 vendor_displayfeature_prop:file { getattr open read map };
+allow priv_app_36 vendor_panel_info_prop:file { getattr open read map };
+allow priv_app_36 vendor_audio_prop:file { getattr open read map };
+allow priv_app_36 qemu_hw_prop:file { getattr open read map };
+allow platform_app_36 vendor_camera_sensor_prop:file { getattr open read map };
+allow platform_app_36 vendor_camera_prop:file { getattr open read map };
+allow platform_app_36 vendor_camera_p3enable_prop:file { getattr open read map };
+allow platform_app_36 vendor_display_prop:file { getattr open read map };
+allow platform_app_36 vendor_displayfeature_prop:file { getattr open read map };
+allow platform_app_36 vendor_panel_info_prop:file { getattr open read map };
+allow platform_app_36 vendor_audio_prop:file { getattr open read map };
+allow platform_app_36 qemu_hw_prop:file { getattr open read map };
+
+# Camera HAL side denials seen alongside the app crash
+allow hal_camera_default vendor_default_prop:property_service set;
+allow hal_camera_default zygote_config_prop:file { getattr open read map };
+
+# Linker probing the shell test dir on load
+dontaudit priv_app_36 shell_test_data_file:dir search;
+dontaudit platform_app_36 shell_test_data_file:dir search;
