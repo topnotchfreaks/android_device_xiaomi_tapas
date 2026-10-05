@@ -13,6 +13,28 @@ $(call inherit-product, device/xiaomi/tapas/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# AxionOS device configuration
+TARGET_DISABLE_EPPE := true
+HBM_SUPPORTED := false
+TARGET_NEEDS_DOZE_FIX := false
+TARGET_DOZE_TAP_PULSE_SUPPORTED := true
+TARGET_DOZE_DOUBLE_TAP_PULSE_SUPPORTED := true
+TARGET_DOZE_PICKUP_PULSE_SUPPORTED := true
+TARGET_DOZE_SIDE_FPS_PULSE_SUPPORTED := true
+
+# Camera information (multiple sensors supported)
+AXION_CAMERA_REAR_INFO := 50,8,2
+AXION_CAMERA_FRONT_INFO := 13
+
+# Maintainer name (underscores become spaces in the UI)
+AXION_MAINTAINER := TopNotchFreaks
+
+# Processor name (underscores become spaces)
+AXION_PROCESSOR := Snapdragon_685
+
+PRODUCT_COPY_FILES += \
+    device/xiaomi/tapas/configs/kernel/ax_kernel_manager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ax_kernel_manager.xml
+
 
 PRODUCT_NAME := lineage_tapas
 PRODUCT_DEVICE := tapas
