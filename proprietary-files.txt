@@ -913,7 +913,7 @@ system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/l
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|3c5a97651dbaa6f54e16d5df5b399e29df77d655
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|961321653e924726bd01af6bfbb33c6740bc66af
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|33008343e8ac15821278faecc1c234e8bea3fe2d
-system_ext/priv-app/ims/ims.apk|824df219df679e96b0bc5298ad10fcb01747b94f
+system_ext/priv-app/ims/ims.apk|0cd303c9d4e473f61089695bd26632ca7cd179ca
 
 # IMS ( vendor )
 vendor/bin/ims_rtp_daemon
