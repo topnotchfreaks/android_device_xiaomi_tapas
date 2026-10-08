@@ -885,7 +885,7 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS (system) - from OS2.0.207.0.VMTMIXM
 system_ext/app/ImsRcsService/ImsRcsService.apk|a32c6a69f9eb918398fdc63c6ea25bbecebbd2b8
-system_ext/app/QtiTelephony/QtiTelephony.apk|fde1b6b3752e2d2edbb773cb6c0d26df67437fc4
+system_ext/app/QtiTelephony/QtiTelephony.apk|20b392f221e0dd73fedda65ffebb3aeb4cf26269
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|e4d155e1ba9b6b6b215eec7d70004cba6b6176e5
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|c5c9dd633c3f5450f315017cd4645a11de3d7ed3
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml|99b679504b1eba6fd311bd5610beec6988d34cfb
