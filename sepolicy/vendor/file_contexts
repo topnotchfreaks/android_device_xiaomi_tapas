@@ -1,5 +1,32 @@
 # Camera
+/(vendor|system/vendor)/lib(64)?/libarcsoft_.*\.so                             u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib(64)?/libipebpsstriping\.so                         u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libcam.*\.so                                  u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libchilog\.so                                 u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libcom\.qti\.chinodeutils\.so                 u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libmialgo.*\.so                               u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libmiphone.*\.so                              u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libmmcamera.*\.so                             u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libmorpho.*\.so                               u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libofflinelog\.so                             u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libopencv\.so                                 u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libopestriping\.so                            u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libreffeature\.so                             u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libtfestriping\.so                            u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libvidhance.*\.so                             u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libxmi.*\.so                                  u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libswregistrationalgo\.so                     u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libthreadutils\.so                            u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libvideofilter_only\.so                       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libvideotxr\.so                               u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libvideoutils\.so                             u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libcalculator.*\.so                           u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libcheckpid\.so                               u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libjpege\.so                                  u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libmctfengine_stub\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libmpbase\.so                                 u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libos\.so                                     u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libsamplefilterplugin\.so                     u:object_r:same_process_hal_file:s0
 
 # Fingerprint data
 /data/gf_data(/.*)?                                                     u:object_r:goodix_fingerprint_data_file:s0
