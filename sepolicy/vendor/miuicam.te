@@ -32,9 +32,9 @@ allow vendor_hal_qspmhal_default platform_app_36:fd use;
 
 # Xiaomi MI-algo native libs loaded from /vendor/lib64 (libmialgoengine.so ...)
 allow priv_app_36 vendor_file:dir { getattr search open read };
-allow priv_app_36 vendor_file:file { getattr open read map execute };
+allow priv_app_36 same_process_hal_file:file { getattr open read map execute };
 allow platform_app_36 vendor_file:dir { getattr search open read };
-allow platform_app_36 vendor_file:file { getattr open read map execute };
+allow platform_app_36 same_process_hal_file:file { getattr open read map execute };
 
 # CDSP / ADSP used by the MI algo engine
 allow priv_app_36 adsprpcd_file:dir { open read search getattr };
@@ -69,7 +69,7 @@ allow platform_app_36 vendor_audio_prop:file { getattr open read map };
 allow platform_app_36 qemu_hw_prop:file { getattr open read map };
 
 # Camera HAL side denials seen alongside the app crash
-allow hal_camera_default vendor_default_prop:property_service set;
+set_prop(hal_camera_default, vendor_camera_prop)
 allow hal_camera_default zygote_config_prop:file { getattr open read map };
 
 # Linker probing the shell test dir on load
